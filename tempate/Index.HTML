@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="text-center display-1">Mission to Mars</h1>
+        <button type="button" class="btn btn-outline-dark btn-lg">
+            <a href="/scrape">Scrape New Data</a>
+        </button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Latest Mars News</h2>
+                <hr>
+                <h4>{{scraped_data.NewsTitle}}</h4>
+                <p>{{scraped_data.NewsParagraph}}</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <h2>Featured Mars Image</h2>
+                <hr>
+                <img class="img-fluid rounded" src= {{ scraped_data.FeaturedImage }} alt="Featured Mars Image">
+            </div>
+            <div class="col-6">
+                <h2>Mars Facts</h2>
+                <hr>
+                {{scraped_data.MarsFactsTable | safe}}
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center">Mars Hemispheres</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            {% for hemisphere_image_url in scraped_data.HemisphereImages %}
+            
+            <div class="col-3 card">
+                <img class="card-img-top" src={{image_url.img_url}} alt={{image_url.title}}>
+                <div class="card-body">
+                    <h3 class="card-title">{{image_url.title}}</h3>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
