@@ -92,3 +92,33 @@ Create a root route / that will query your Mongo database and pass the mars data
 
 
 Create a template HTML file called index.html that will take the mars data dictionary and display all of the data in the appropriate HTML elements. Use the following as a guide for what the final product should look like, but feel free to create your own design.
+
+# Step 3 - Submission
+To submit your work to BootCampSpot, create a new GitHub repository and upload the following:
+
+
+The Jupyter Notebook containing the scraping code used.
+
+
+Screenshots of your final application.
+
+
+Submit the link to your new repository to BootCampSpot.
+
+
+
+# Hints
+
+
+Use Splinter to navigate the sites when needed and BeautifulSoup to help find and parse out the necessary data.
+
+
+Use Pymongo for CRUD applications for your database. For this homework, you can simply overwrite the existing document each time the /scrape url is visited and new data is obtained.
+
+
+Use Bootstrap to structure your HTML template.
+
+
+
+Copyright
+Trilogy Education Services © 2021. All Rights Reserved.
