@@ -1,6 +1,6 @@
 In this assignment, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
 
-Step 1 - Scraping
+#Step 1 - Scraping
 Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
 Create a Jupyter Notebook file called mission_to_mars.ipynb and use this to complete all of your scraping and analysis tasks. The following outlines what you need to scrape.
@@ -11,7 +11,7 @@ NASA Mars News
 Scrape the Mars News Site and collect the latest News Title and Paragraph Text. Assign the text to variables that you can reference later.
 
 
-# Example:
+Example:
 news_title = "NASA's Next Mars Mission to Investigate Interior of Red Planet"
 
 news_p = "Preparation of NASA's next spacecraft to Mars, InSight, has ramped up this summer, on course for launch next May from Vandenberg Air Force Base in central California -- the first interplanetary launch in history from America's West Coast."
@@ -33,8 +33,7 @@ Make sure to find the image url to the full size .jpg image.
 Make sure to save a complete url string for this image.
 
 
-
-# Example:
+Example:
 featured_image_url = 'https://spaceimages-mars.com/image/featured/mars2.jpg'
 
 
@@ -65,7 +64,7 @@ Append the dictionary with the image url string and the hemisphere title to a li
 
 
 
-# Example:
+Example:
 hemisphere_image_urls = [
     {"title": "Valles Marineris Hemisphere", "img_url": "..."},
     {"title": "Cerberus Hemisphere", "img_url": "..."},
@@ -76,7 +75,7 @@ hemisphere_image_urls = [
 
 
 
-Step 2 - MongoDB and Flask Application
+#Step 2 - MongoDB and Flask Application
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
 
